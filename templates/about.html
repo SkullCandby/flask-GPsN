@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <!-- Site Metas -->
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+
+    <title>Green quant</title>
+
+    <!-- slider stylesheet -->
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css"/>
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css"/>
+
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../static/css/style.css" rel="stylesheet"/>
+    <!-- responsive style -->
+    <link href="../static/css/responsive.css" rel="stylesheet"/>
+<style>
+.about-box {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    background: #ffffff;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.about-text {
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 60%;
+    z-index: 9999;
+    padding: 16px;
+    margin-left: auto;
+    background: #FFF;
+    border: 1px solid #81e0ac;
+    margin-right: -60px;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.about-img {
+    display: flex;
+    justify-content: start;
+    z-index: 1;
+    flex-direction: column;
+    width: 50%;
+}
+
+.box-txt {
+    width: 100%;
+}
+
+.second {
+    margin-right: 0px;
+    margin-left: 45px;
+}
+
+.second-img {
+    margin-left: auto;
+}
+.hide_img{
+    display: none;
+}
+
+.custom-link {
+    color: #81e0ac; /* Цвет ссылки по умолчанию */
+    text-decoration: none;
+}
+
+.custom-link:hover {
+    color: darkgray; /* Цвет при наведении */
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+/* Медиа-запрос для экранов меньше 767px (телефоны) */
+@media (max-width: 768px) {
+    .about-box {
+        flex-direction: column; /* Расположить контент вертикально */
+    }
+    .hide_img{
+        display: flex;
+}
+
+    .about-text, .about-img {
+        width: 100%; /* Полная ширина как для текста, так и для изображения */
+        margin: 0; /* Убрать отступы */
+        padding: 16px; /* Добавить немного отступа для разделения элементов */
+        font-size: 1.4rem; /* Уменьшить размер шрифта для текста */
+    }
+
+    .second {
+        margin-left: 0;
+    }
+
+    .second-img, .phone-img {
+        display: none; /* Скрыть второе изображение на телефонах */
+    }
+}
+
+
+</style>
+
+
+</head>
+
+<body class="sub_page">
+
+<div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container ">
+                <a class="navbar-brand" href="index.html">
+            <span>
+              GREEN QUANT
+            </span>
+                </a>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="s-1"> </span>
+                    <span class="s-2"> </span>
+                    <span class="s-3"> </span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+                        <ul class="navbar-nav  ">
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{{ url_for('index') }}">Home <span
+                                        class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{{ url_for('about') }}"> About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('service') }}"> Cases </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contactLink">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- end header section -->
+</div>
+
+<!-- about section -->
+
+<!-- Introduction Section -->
+<section class="introduction_section">
+    <div class="container">
+        <div class="content_with_image">
+            <section class="about-box">
+                 <div class="image_box about-img hide_img">
+                    <img src="../static/images/table_img.jpg" alt="Image 1" style="width: 100%; height: 100%">
+                </div>
+                <section class="about-text">
+                    <div class="heading_container">
+                        <h2 style="font-size: 25px">Welcome to Green Quant</h2>
+                    </div>
+
+                    <div class="text_box box-txt" style="margin-top: 15px;text-align: left">
+                        <p>
+                            We introduce you to a revolutionary agricultural solution based on quantum entanglement. Our
+                            technology aims to help farmers operate and achieve success in their fields.
+                        </p>
+                    </div>
+                </section>
+                <!-- Image on PCs -->
+                <div class="image_box about-img second-img">
+                    <img src="../static/images/table_img.jpg" alt="Image 1" style="width: 100%; height: 100%">
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+
+<!-- Mission Section -->
+<section class="introduction_section">
+    <div class="container">
+        <div class="content_with_image">
+            <section class="about-box">
+                <div class="image_box about-img">
+                    <img src="../static/images/8331468.jpg" alt="Image 1" style="width: 100%; height: 100%">
+                </div>
+                <section class="about-text second">
+                    <div class="heading_container">
+                        <h2 style="font-size: 25px">Technology</h2>
+                    </div>
+
+                    <div class="text_box box-txt" style="margin-top: 15px; text-align: left;">
+                        <p>
+                            Our technology is based on the principle of quantum entanglement. It involves purposeful
+                            influence on objects in the living world, which are accessible for visual observation, by
+                            operating digitized records of these objects.<br>
+                            <a href="../static/docs/green_quant_techology_explain.pdf" download class="custom-link">Read the
+                                physics explanation</a>
+                        </p>
+                    </div>
+                </section>
+                <!-- Image on Phones -->
+                <div class="image_box about-img second-img  hide_img">
+                    <img src="../static/images/8331468.jpg" alt="Image 1" style="width: 100%; height: 100%">
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+
+<!-- Quantum Technology Section -->
+<section class="introduction_section">
+    <div class="container">
+        <div class="content_with_image">
+            <section class="about-box">
+                <div class="image_box about-img hide_img">
+                    <img src="../static/images/4542742.jpg" alt="Image 1" style="width: 100%; height: 100%">
+                </div>
+                <section class="about-text">
+                    <div class="heading_container">
+                        <h2 style="font-size: 25px; ">Extensive Testing</h2>
+                    </div>
+
+                    <div class="text_box box-txt" style="margin-top: 15px; text-align: left;">
+                        <p>
+                            Our technology has undergone more than two decades of rigorous development and testing. It has been deployed in various regions worldwide, across a multitude of crop varieties, consistently yielding <a href="{{ url_for('service') }}" class="custom-link"> positive results</a>.
+                        </p>
+                    </div>
+                </section>
+                <!-- Image on PCs -->
+                <div class="image_box about-img second-img">
+                    <img src="../static/images/4542742.jpg" alt="Image 1" style="width: 100%; height: 100%">
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- end contact section -->
+
+
+    <!-- info section -->
+
+    <!-- end info_section -->
+
+
+    <!-- footer section -->
+    <div class="footer_bg" style="padding-top: 360px !important;">
+        <section class="info_section layout_padding2">
+            <div class="container" style="margin-left: 20% !important">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="info_logo">
+                            <h3>
+                                GREEN QUANT
+                            </h3>
+                            <p>
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="info_links">
+                            <h4>
+                                BASIC LINKS
+                            </h4>
+                            <ul class="  ">
+                                <li class=" ">
+                                    <a class="" href="index.html">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="active">
+                                    <a class="" href="about.html"> About</a>
+                                </li>
+                                <li class="">
+                                    <a class="" href="service.html"> Services </a>
+                                </li>
+                                <li class="">
+                                    <a class="" href="#contactLink">Contact Us</a>
+                                </li>
+                                <li class="">
+                                   <a class="" href="../static/docs/green_quant_techology_explain.pdf" download="">Documentation</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="info_contact">
+                            <h4>
+                                CONTACT DETAILS
+                            </h4>
+                            <a>
+                                <div class="img-box">
+                                    <img src="../static/images/telephone-white.png" width="12px" alt="">
+                                </div>
+                                <p>
+                                    +01 1234567890
+                                </p>
+                            </a>
+                            <a>
+                                <div class="img-box">
+                                    <img src="../static/images/envelope-white.png" width="18px" alt="">
+                                </div>
+                                <p>
+                                    greenquant.business@gmail.com
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- end info_section -->
+
+
+        <!-- footer section -->
+        <section class="container-fluid footer_section">
+            <div class="container">
+                <p>
+                    &copy; <span id="displayYear"></span> All Rights Reserved By
+                    <a href="https://html.design/">Green Quant</a>
+                </p>
+            </div>
+        </section>
+    </div>
+    <!-- footer section -->
+
+</div>
+
+<script type="text/javascript" src="../static/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../static/js/bootstrap.js"></script>
+<script type="text/javascript" src="../static/js/custom.js"></script>
+
+
+</body>
+
+</html>
