@@ -544,14 +544,14 @@
                                 BASIC LINKS
                             </h4>
                             <ul class="  ">
-                                <li class=" active">
-                                    <a class="" href="index.html">Home <span class="sr-only">(current)</span></a>
+                                <li class=" ">
+                                    <a class="" href="{{ url_for('index') }}">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="active">
+                                    <a class="" href="{{ url_for('about') }}"> About</a>
                                 </li>
                                 <li class="">
-                                    <a class="" href="about.html"> About</a>
-                                </li>
-                                <li class="">
-                                    <a class="" href="service.html"> Services </a>
+                                    <a class="" href="{{ url_for('service') }}"> Cases </a>
                                 </li>
                                 <li class="">
                                     <a class="" href="#contactLink">Contact Us</a>
