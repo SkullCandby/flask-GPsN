@@ -12,6 +12,12 @@
     <meta name="description" content=""/>
     <meta name="author" content=""/>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
     <title>Green quant</title>
 
     <!-- slider stylesheet -->
@@ -27,17 +33,6 @@
     <link href="../static/css/style.css" rel="stylesheet"/>
     <!-- responsive style -->
     <link href="../static/css/responsive.css" rel="stylesheet"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-    <style>
-        .left-align {
-    display: block;  /* This makes the span behave like a block element, taking the full width */
-    text-align: left;
-}
-    </style>
 </head>
 
 <body class="sub_page">
@@ -93,16 +88,14 @@
 <section class="service_section layout_padding">
     <div class="container-fluid">
         <div class="heading_container">
-    <h2>Our Cases</h2>
-
-    <p>We provide services using technology in two basic versions or in combination:</p>
-    <div class="left-align" style="width: 500px; display: flex; flex-direction: column; justify-content: space-between; gap: 70px;">
-        <p> Direct remote influence on bio-agrocinosis using space or aerial photography to reproduce the connecting signal.</p>
-        <p> Indirect influence using the so-called. synergists - environmentally friendly substances to which we remotely impart specified biologically active properties. Synergists are diluted in a ratio of about 1:10,000 with water used for soaking seeds, watering, and irrigation.</p>
-    </div>
-    <p>The effect of using the technology is assessed on the basis of comparison with the results obtained under similar conditions without the use of this technology (control).</p>
+    <h2 style="font-weight: bold; font-size: 28px; margin-bottom: 10px; margin-top: 5px;">Our Cases</h2>
 </div>
-        <h2 style="font-weight: bold; font-size: 24px">Direct influence</h2>
+        <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 10px;">
+            <h2 style="font-weight: bold; font-size: 24px">Direct influence</h2>
+            <a data-toggle="tooltip" data-placement="right" title="Direct remote influence on bio-agrocinosis using space or aerial photography to reproduce the connecting signal.">
+                <img src="../static/images/info-circle-svgrepo-com.svg" style="width:16; height: 16px; margin-bottom: 2px;">
+            </a>
+        </div>
         <div class="row">
 
             <!-- Work Example 1 -->
@@ -209,7 +202,12 @@ Video files (sim-file) were received from Australia by e-mail. The photo shows c
                 </div>
             </div>
         </div>
+            <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 10px;">
             <h2 style="font-weight: bold; font-size: 24px">Indirect influence</h2>
+            <a data-toggle="tooltip" data-placement="right" title="Indirect influence using the so-called. synergists - environmentally friendly substances to which we remotely impart specified biologically active properties. Synergists are diluted in a ratio of about 1:10,000 with water used for soaking seeds, watering, and irrigation.">
+                <img src="../static/images/info-circle-svgrepo-com.svg" style="width:16; height: 16px; margin-bottom: 2px;">
+            </a>
+        </div>
             <div class="row">
             <!-- Work Example 3 -->
             <div class="col-md-6 mb-4">
@@ -274,10 +272,6 @@ A2, B2 - with treatment
 
     </div>
 </section>
-
-
-<!-- end service section -->
-
 
 <div class="footer_bg">
 
@@ -346,20 +340,23 @@ A2, B2 - with treatment
                         <h4>
                             BASIC LINKS
                         </h4>
-                        <ul class="  ">
-                            <li class=" ">
-                                <a class="" href="index.html">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="">
-                                <a class="" href="about.html"> About</a>
-                            </li>
-                            <li class="active">
-                                <a class="" href="service.html"> Services </a>
-                            </li>
-                            <li class="">
-                                <a class="" href="#contactLink">Contact Us</a>
-                            </li>
-                        </ul>
+                       <ul class="  ">
+                                <li class=" ">
+                                    <a class="" href="{{ url_for('index') }}">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="active">
+                                    <a class="" href="{{ url_for('about') }}"> About</a>
+                                </li>
+                                <li class="">
+                                    <a class="" href="{{ url_for('service') }}"> Cases </a>
+                                </li>
+                                <li class="">
+                                    <a class="" href="#contactLink">Contact Us</a>
+                                </li>
+                                <li class="">
+                                   <a class="" href="../static/docs/green_quant_techology_explain.pdf" download="">Documentation</a>
+                                </li>
+                            </ul>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -372,7 +369,7 @@ A2, B2 - with treatment
                                 <img src="../static/images/telephone-white.png" width="12px" alt="">
                             </div>
                             <p>
-                                +01 1234567890
+                                +31 6 10 83 13 88
                             </p>
                         </a>
                         <a>
