@@ -12,12 +12,6 @@
     <meta name="description" content=""/>
     <meta name="author" content=""/>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-    
     <title>Green quant</title>
 
     <!-- slider stylesheet -->
@@ -33,6 +27,17 @@
     <link href="../static/css/style.css" rel="stylesheet"/>
     <!-- responsive style -->
     <link href="../static/css/responsive.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        .left-align {
+    display: block;  /* This makes the span behave like a block element, taking the full width */
+    text-align: left;
+}
+    </style>
 </head>
 
 <body class="sub_page">
@@ -91,13 +96,13 @@
     <h2>Our Cases</h2>
 
     <p>We provide services using technology in two basic versions or in combination:</p>
-    <ul class="left-align">
-        <li> Direct remote influence on bio-agrocinosis using space or aerial photography to reproduce the connecting signal.</li>
-        <li> Indirect influence using the so-called. synergists - environmentally friendly substances to which we remotely impart specified biologically active properties. Synergists are diluted in a ratio of about 1:10,000 with water used for soaking seeds, watering, and irrigation.</li>
-    </ul>
+    <div class="left-align" style="width: 500px; display: flex; flex-direction: column; justify-content: space-between; gap: 70px;">
+        <p> Direct remote influence on bio-agrocinosis using space or aerial photography to reproduce the connecting signal.</p>
+        <p> Indirect influence using the so-called. synergists - environmentally friendly substances to which we remotely impart specified biologically active properties. Synergists are diluted in a ratio of about 1:10,000 with water used for soaking seeds, watering, and irrigation.</p>
+    </div>
     <p>The effect of using the technology is assessed on the basis of comparison with the results obtained under similar conditions without the use of this technology (control).</p>
 </div>
-        <div style="display: flex; flex-direction: row;"><h2 style="font-weight: bold; font-size: 24px">Direct influence</h2>     <a data-toggle="tooltip" data-placement="right" title="Hooray!"><img src="../static/images/info-circle-svgrepo-com.svg" style="width:16; height: 16px"></a></div>
+        <h2 style="font-weight: bold; font-size: 24px">Direct influence</h2>
         <div class="row">
 
             <!-- Work Example 1 -->
@@ -270,6 +275,10 @@ A2, B2 - with treatment
     </div>
 </section>
 
+
+<!-- end service section -->
+
+
 <div class="footer_bg">
 
     <!-- contact section -->
@@ -337,23 +346,20 @@ A2, B2 - with treatment
                         <h4>
                             BASIC LINKS
                         </h4>
-                       <ul class="  ">
-                                <li class=" ">
-                                    <a class="" href="{{ url_for('index') }}">Home <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="active">
-                                    <a class="" href="{{ url_for('about') }}"> About</a>
-                                </li>
-                                <li class="">
-                                    <a class="" href="{{ url_for('service') }}"> Cases </a>
-                                </li>
-                                <li class="">
-                                    <a class="" href="#contactLink">Contact Us</a>
-                                </li>
-                                <li class="">
-                                   <a class="" href="../static/docs/green_quant_techology_explain.pdf" download="">Documentation</a>
-                                </li>
-                            </ul>
+                        <ul class="  ">
+                            <li class=" ">
+                                <a class="" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="">
+                                <a class="" href="about.html"> About</a>
+                            </li>
+                            <li class="active">
+                                <a class="" href="service.html"> Services </a>
+                            </li>
+                            <li class="">
+                                <a class="" href="#contactLink">Contact Us</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -366,7 +372,7 @@ A2, B2 - with treatment
                                 <img src="../static/images/telephone-white.png" width="12px" alt="">
                             </div>
                             <p>
-                                +31 6 10 83 13 88
+                                +01 1234567890
                             </p>
                         </a>
                         <a>
